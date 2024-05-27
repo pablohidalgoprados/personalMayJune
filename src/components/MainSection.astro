@@ -1,0 +1,19 @@
+---
+const { color, title, subtitle, image } = Astro.props;
+const textColor = `text-${color}`;
+---
+
+<section
+  class="landing-section bg-slate-500 h-screen w-screen text-center relative overflow-hidden animate-blurred-fade-in"
+  data-header-color={color}
+>
+
+  <div class="absolute top-0 bottom-0 h-full w-full z-10">
+    <img
+      alt=""
+      class="h-full w-full object-cover object-center bg-image"
+      src={image}
+      id="bg-image-modely"
+    />
+  </div>
+</section>
