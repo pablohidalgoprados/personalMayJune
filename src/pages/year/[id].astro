@@ -7,13 +7,17 @@ import YearList from "../../components/YearList.astro";
 
 const { id } = Astro.params;
 
+if (!id) {
+  throw new Error(`Year id is missing`);
+}
+
 const currentYear = years.find(year => year.id === id);
 if (!currentYear) {
   throw new Error(`Year with id ${id} not found`);
 }
 
 const filteredPlayers = players.filter(player => player.years.includes(currentYear.number));
-const positionOrder = {
+const positionOrder: Record<string, number> = {
   'top': 1,
   'jungler': 2,
   'mid': 3,
@@ -24,7 +28,7 @@ const positionOrder = {
 
 filteredPlayers.sort((a, b) => positionOrder[a.position] - positionOrder[b.position]);
 
-const displayYear = (yearNumber) => {
+const displayYear = (yearNumber: number): string => {
   switch (yearNumber) {
     case 2016.1:
       return "2016 Spring";
@@ -33,9 +37,10 @@ const displayYear = (yearNumber) => {
     case 2016.3:
       return "2016 Worlds";
     default:
-      return yearNumber;
+      return yearNumber.toString();
   }
 };
+
 ---
 
 <Layout title={`G2 History - ${displayYear(currentYear.number)}`}>
@@ -46,7 +51,7 @@ const displayYear = (yearNumber) => {
         {
           years.slice(0, -1).map((year) => (
             <li class="mb-2">
-              <YearList year={{ ...year, number: displayYear(year.number) }} />
+              <YearList year={year} displayNumber={displayYear(year.number)} />
             </li>
           ))
         }
@@ -58,7 +63,7 @@ const displayYear = (yearNumber) => {
         {
           filteredPlayers.map((player) => (
             <a href={`/players/${player.id}`} class="flex flex-col items-center transition-all duration-300">
-              <img src={player.image} alt={player.name} class="w-40 h-40 rounded-full mb-2 object-cover object-top" transition:name=`player ${player.id} image` />
+              <img src={player.image} alt={player.name} class="w-40 h-40 rounded-full mb-2 object-cover object-top" transition:name={`player ${player.id} image`} />
               <p class="text-center">{player.name}</p>
             </a>
           ))

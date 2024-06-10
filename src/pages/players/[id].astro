@@ -6,12 +6,21 @@ import { players } from "../../lib/data";
 
 const { id } = Astro.params;
 
-const player = players.find((player) => player.id === parseInt(id));
+if (!id) {
+  throw new Error(`Player id is missing`);
+}
+
+const playerId = Number(id);
+if (isNaN(playerId)) {
+  throw new Error(`Player id is not a valid number`);
+}
+
+const player = players.find((player) => player.id === playerId);
 if (!player) {
   throw new Error(`Player with id ${id} not found`);
 }
 
-const displayYear = (yearNumber) => {
+const displayYear = (yearNumber: number | string): string => {
   switch (yearNumber) {
     case 2016.1:
       return "2016 Spring";
@@ -20,11 +29,11 @@ const displayYear = (yearNumber) => {
     case 2016.3:
       return "2016 Worlds";
     default:
-      return yearNumber;
+      return yearNumber.toString();
   }
 };
 
-const getEmoticon = (title) => {
+const getEmoticon = (title: string): string => {
   if (title.includes("1st")) {
     return "🏆"; // Trophy for 1st place
   } else if (title.includes("2nd")) {

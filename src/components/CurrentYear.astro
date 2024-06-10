@@ -6,7 +6,7 @@ const lastYear = years[years.length - 1].number;
 
 const filteredPlayers = players.filter(player => player.years.includes(lastYear));
 
-const positionOrder = {
+const positionOrder: Record<string, number> = {
   'top': 1,
   'jungler': 2,
   'mid': 3,
@@ -19,13 +19,12 @@ filteredPlayers.sort((a, b) => positionOrder[a.position] - positionOrder[b.posit
 ---
 <h2 class="text-2xl font-bold my-8 text-center">OUR CHAMPIONS</h2>
 <div class="flex space-x-4 justify-center">
-  
   {
     filteredPlayers.map((player) => (
       <div class="flex flex-col items-center">
         <a href={`/players/${player.id}`} class="transition-all duration-300">
-        <img src={player.image} alt={player.name} class="w-40 h-40 rounded-full mb-2 object-cover object-top" transition:name=`player ${player.id} image` />
-        <p class="text-center">{player.name}</p>
+          <img src={player.image} alt={player.name} class="w-40 h-40 rounded-full mb-2 object-cover object-top" transition:name={`player ${player.id} image`} />
+          <p class="text-center">{player.name}</p>
         </a>
       </div>
     ))

@@ -2,10 +2,11 @@
 import type { Year } from "../lib/data"
 
 interface Props {
-  year: Year
+  year: Year,
+  displayNumber: string
 }
 
-const { year } = Astro.props
-const { id, number, image, titles } = year
+const { year, displayNumber } = Astro.props
+const { id, image, titles } = year
 ---
-<a href={`/year/${id}`}>{number}</a>
+<a href={`/year/${id}`}>{displayNumber}</a>

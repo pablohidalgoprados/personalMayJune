@@ -49,7 +49,7 @@ import Logo from "./Logo.astro";
 <script>
   function setupMenuBackdrop() {
     const listItem = document.querySelectorAll("#landing-header li");
-    const menuBackdrop = document.querySelector("#menu-backdrop");
+    const menuBackdrop = document.querySelector("#menu-backdrop") as HTMLElement;
 
     listItem.forEach((item) => {
       item.addEventListener("mouseenter", () => {
@@ -71,7 +71,7 @@ import Logo from "./Logo.astro";
   }
 
   function setupHeaderObserver() {
-    const header = document.querySelector("#landing-header");
+    const header = document.querySelector("#landing-header") as HTMLElement;
     const observerOptions = {
       root: null,
       rootMargin: "0px",
@@ -93,8 +93,8 @@ import Logo from "./Logo.astro";
   }
 
   function setupActiveRosterHover() {
-    var liElement = document.getElementById("activeroster");
-    var spans = liElement.querySelectorAll("span");
+    const liElement = document.getElementById("activeroster") as HTMLElement;
+    const spans = liElement.querySelectorAll("span");
 
     liElement.addEventListener("mouseenter", function () {
       spans.forEach(function (span) {
