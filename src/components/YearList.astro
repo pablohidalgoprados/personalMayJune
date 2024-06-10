@@ -1,0 +1,11 @@
+---
+import type { Year } from "../lib/data"
+
+interface Props {
+  year: Year
+}
+
+const { year } = Astro.props
+const { id, number, image, titles } = year
+---
+<a href={`/year/${id}`}>{number}</a>

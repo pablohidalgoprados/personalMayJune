@@ -1,0 +1,75 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import LandingHeader from "../../components/LandingHeader.astro";
+import Logo from "../../components/Logo.astro";
+import { players } from "../../lib/data";
+
+const { id } = Astro.params;
+
+const player = players.find((player) => player.id === parseInt(id));
+if (!player) {
+  throw new Error(`Player with id ${id} not found`);
+}
+
+const displayYear = (yearNumber) => {
+  switch (yearNumber) {
+    case 2016.1:
+      return "2016 Spring";
+    case 2016.2:
+      return "2016 Summer";
+    case 2016.3:
+      return "2016 Worlds";
+    default:
+      return yearNumber;
+  }
+};
+
+const getEmoticon = (title) => {
+  if (title.includes("1st")) {
+    return "🏆"; // Trophy for 1st place
+  } else if (title.includes("2nd")) {
+    return "🥈"; // Silver medal for 2nd place
+  } else if (title.includes("3rd")) {
+    return "🥉"; // Bronze medal for 3rd place
+  } else {
+    return "🎖"; // General award for other titles
+  }
+};
+---
+
+<Layout title={`Player - ${player.name}`}>
+  <LandingHeader />
+  <div class="flex mt-8">
+    <aside class="w-1/2 flex flex-col items-center p-4 ml-14 rounded-xl">
+      <div class="flex items-center">
+        <img
+          src={player.image}
+          alt={player.name}
+          class="w-40 h-40 rounded-full mb-2 object-cover object-top"
+          transition:name={`player ${id} image`}
+        />
+        <div class="ml-4">
+          <h1 class="text-3xl font-bold">{player.name}</h1>
+          <p class="text-xl">Role: {player.position}</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h2 class="text-2xl font-bold">Years Played</h2>
+        <ul class="list-disc ml-4">
+          {player.years.map((year) => <li>{displayYear(year)}</li>)}
+        </ul>
+      </div>
+    </aside>
+    <main class="w-1/2 p-4 mt-6 flex flex-col items-center">
+      <h2 class="text-4xl font-bold mb-4 text-center">Titles</h2>
+      <ul class="list-none">
+        {player.titles.map((title) => (
+          <li class="flex items-center mb-4">
+            <span class="w-8 h-8 flex items-center justify-center text-2xl leading-none">{getEmoticon(title)}</span>
+            <span class="ml-2 text-xl">{title}</span>
+          </li>
+        ))}
+      </ul>
+    </main>
+  </div>
+</Layout>

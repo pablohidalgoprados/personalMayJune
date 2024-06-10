@@ -4,7 +4,7 @@ import Logo from "./Logo.astro";
 
 <header
   id="landing-header"
-  class="py-5 px-10 flex items-center fixed top-0 w-full justify-between z-40 animate-blurred-fade-in"
+  class="py-5 px-10 flex items-center top-0 w-full justify-between z-40"
 >
   <div class="flex flex-grow basis-0">
     <Logo />
@@ -14,10 +14,9 @@ import Logo from "./Logo.astro";
     <ul
       class="flex text-sm [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:transition-colors [&>li>a]:duration-300"
     >
-      <li><a href="/" data-astro-cid-3ef6ksr2>Home</a></li>
+      <li><a href="/" class="transition-all duration-300" transition:name="active">Home</a></li>
       <li id="activeroster">
-        <a href="/activeroster"
-          ><span
+        <a href="/activeroster" class="transition-all duration-300" transition:name="home"><span
             class="text-black font-bold bg-white pl-1.5 pt-1.5 pb-1.5 rounded-l transition-colors"
             >Active</span
           ><span
@@ -27,7 +26,7 @@ import Logo from "./Logo.astro";
           ></a
         >
       </li>
-      <li><a href="#">Former Rosters</a></li>
+      <li><a href={`/year/1`}>Former Rosters</a></li>
       <li><a href="#">History</a></li>
     </ul>
   </nav>
@@ -48,53 +47,52 @@ import Logo from "./Logo.astro";
 </header>
 
 <script>
-  const listItem = document.querySelectorAll("#landing-header li");
-  const menuBackdrop = document.querySelector("#menu-backdrop") as HTMLElement;
+  function setupMenuBackdrop() {
+    const listItem = document.querySelectorAll("#landing-header li");
+    const menuBackdrop = document.querySelector("#menu-backdrop");
 
-  listItem.forEach((item) => {
-    item.addEventListener("mouseenter", () => {
-      const { left, top, width, height } = item.getBoundingClientRect();
-      const { clientHeight, clientWidth } = item;
+    listItem.forEach((item) => {
+      item.addEventListener("mouseenter", () => {
+        const { left, top, width, height } = item.getBoundingClientRect();
 
-      menuBackdrop.style.setProperty("--left", `${left}px`);
-      menuBackdrop.style.setProperty("--top", `${top}px`);
-      menuBackdrop.style.setProperty("--width", `${width}px`);
-      menuBackdrop.style.setProperty("--height", `${height}px`);
-      menuBackdrop.style.opacity = "1";
-      menuBackdrop.style.visibility = "visible";
+        menuBackdrop.style.setProperty("--left", `${left}px`);
+        menuBackdrop.style.setProperty("--top", `${top}px`);
+        menuBackdrop.style.setProperty("--width", `${width}px`);
+        menuBackdrop.style.setProperty("--height", `${height}px`);
+        menuBackdrop.style.opacity = "1";
+        menuBackdrop.style.visibility = "visible";
+      });
+
+      item.addEventListener("mouseleave", () => {
+        menuBackdrop.style.opacity = "0";
+        menuBackdrop.style.visibility = "hidden";
+      });
     });
+  }
 
-    item.addEventListener("mouseleave", () => {
-      menuBackdrop.style.opacity = "0";
-      menuBackdrop.style.visibility = "hidden";
-    });
-  });
-</script>
+  function setupHeaderObserver() {
+    const header = document.querySelector("#landing-header");
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.9,
+    };
 
-<script>
-  const header = document.querySelector("#landing-header") as HTMLElement;
-  const observerOptions = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.9,
-  };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const { isIntersecting } = entry;
+        if (isIntersecting) {
+          const color = entry.target.getAttribute("data-header-color");
+          header.style.color = color || "black";
+        }
+      });
+    }, observerOptions);
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const { isIntersecting } = entry;
-      if (isIntersecting) {
-        const color = entry.target.getAttribute("data-header-color");
-        header.style.color = color || "black";
-      }
-    });
-  }, observerOptions);
+    const sections = document.querySelectorAll(".landing-section");
+    sections.forEach((section) => observer.observe(section));
+  }
 
-  const sections = document.querySelectorAll(".landing-section");
-  sections.forEach((section) => observer.observe(section));
-</script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
+  function setupActiveRosterHover() {
     var liElement = document.getElementById("activeroster");
     var spans = liElement.querySelectorAll("span");
 
@@ -110,5 +108,18 @@ import Logo from "./Logo.astro";
         span.style.backgroundColor = "";
       });
     });
+  }
+
+  function initializeScripts() {
+    setupMenuBackdrop();
+    setupHeaderObserver();
+    setupActiveRosterHover();
+  }
+
+  document.addEventListener("DOMContentLoaded", initializeScripts);
+
+  // Re-run the scripts after navigation
+  document.addEventListener('astro:page-load', () => {
+    setTimeout(initializeScripts, 0);
   });
 </script>

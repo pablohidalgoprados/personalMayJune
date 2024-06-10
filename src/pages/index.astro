@@ -1,20 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Logo from "../components/Logo.astro";
 import LandingHeader from "../components/LandingHeader.astro";
-import MainSection from "../components/MainSection.astro";
 ---
 
-<Layout title="Astro 1">
+<Layout title="G2 History">
   <LandingHeader />
-
-  <main class="snap-y snap-mandatory relative w-full h-screen overflow-auto">
-    <div class="snap-center overflow-hidden">
-      <MainSection color="black" image="/G2LogoBG.avif" />
-    </div>
-    <div class="snap-center overflow-hidden">
-      <MainSection color="white" image="/G2LogoBG_BlackAndWhite.avif"/>
-    </div>
-  </main>
 </Layout>
