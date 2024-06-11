@@ -4,7 +4,7 @@ import Logo from "./Logo.astro";
 
 <header
   id="landing-header"
-  class="py-5 px-10 flex items-center top-0 w-full justify-between z-40"
+  class="py-5 px-10 hidden md:flex items-center top-0 w-full justify-between z-40"
 >
   <div class="flex flex-grow basis-0">
     <a
@@ -55,7 +55,22 @@ import Logo from "./Logo.astro";
       <li><!-- Aquí puede haber algo o no --></li>
     </ul>
   </nav>
-  <div class="md:hidden">
+</header>
+
+<header
+  id="landing-header-mobile"
+  class="py-5 px-10 flex md:hidden items-center top-0 w-full justify-between z-40"
+>
+  <div class="flex flex-grow basis-0 justify-center">
+    <a
+      href="/"
+      class="transition-all duration-300"
+    >
+      <Logo />
+    </a>
+  </div>
+
+  <div>
     <button id="menu-button" class="focus:outline-none">
       <svg
         class="w-6 h-6"
@@ -73,6 +88,7 @@ import Logo from "./Logo.astro";
     </button>
   </div>
 </header>
+
 <div
   id="mobile-menu"
   class="hidden md:hidden shadow-md mt-2"
