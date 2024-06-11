@@ -48,13 +48,13 @@ const getEmoticon = (title: string): string => {
 
 <Layout title={`Player - ${player.name}`}>
   <LandingHeader />
-  <div class="flex mt-8">
-    <aside class="w-1/2 flex flex-col items-center p-4 ml-14 rounded-xl">
-      <div class="flex items-center">
+  <div class="flex flex-col lg:flex-row mt-8">
+    <aside class="w-full lg:w-1/2 flex flex-col items-center p-4 lg:ml-14 rounded-xl mb-8 lg:mb-0">
+      <div class="flex items-center mb-4">
         <img
           src={player.image}
           alt={player.name}
-          class="w-40 h-40 rounded-full mb-2 object-cover object-top"
+          class="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full mb-2 object-cover object-top"
           transition:name={`player ${id} image`}
         />
         <div class="ml-4">
@@ -69,7 +69,7 @@ const getEmoticon = (title: string): string => {
         </ul>
       </div>
     </aside>
-    <main class="w-1/2 p-4 mt-6 flex flex-col items-center">
+    <main class="w-full lg:w-1/2 p-4 mt-6 flex flex-col items-center">
       <h2 class="text-4xl font-bold mb-4 text-center">Titles</h2>
       <ul class="list-none">
         {player.titles.map((title) => (

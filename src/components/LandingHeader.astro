@@ -89,17 +89,36 @@ import Logo from "./Logo.astro";
   function initializeMenu() {
     const menuButton = document.getElementById("menu-button");
     const menu = document.getElementById("mobile-menu");
+    const content = document.querySelector("main") || document.body;
+
     if (menuButton && menu) {
       menuButton.addEventListener("click", function () {
+        content.classList.add("smooth-scroll");
+
         if (menu.classList.contains("hidden")) {
           menu.classList.remove("hidden", "animate-slide-out-top");
           menu.classList.add("animate-slide-in-top");
+          content.style.marginTop = `50px`; // Ajustar margen superior a una distancia menor
         } else {
           menu.classList.remove("animate-slide-in-top");
           menu.classList.add("animate-slide-out-top");
           setTimeout(() => {
             menu.classList.add("hidden");
-          }, 300); // Duración de la animación en ms
+            content.style.marginTop = ""; // Eliminar margen superior
+          }, 100); // Duración de la animación en ms
+        }
+      });
+
+      document.addEventListener("click", function (event) {
+        if (!menu.contains(event.target as Node) && !menuButton.contains(event.target as Node)) {
+          if (!menu.classList.contains("hidden")) {
+            menu.classList.remove("animate-slide-in-top");
+            menu.classList.add("animate-slide-out-top");
+            setTimeout(() => {
+              menu.classList.add("hidden");
+              content.style.marginTop = ""; // Eliminar margen superior
+            }, 100); // Duración de la animación en ms
+          }
         }
       });
     }
@@ -180,6 +199,5 @@ import Logo from "./Logo.astro";
     setupActiveRosterHover();
   }
 
-  
   document.addEventListener("astro:page-load", initializeScripts);
 </script>
