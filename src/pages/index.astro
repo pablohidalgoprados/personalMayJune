@@ -17,9 +17,16 @@ import LandingHeader from "../components/LandingHeader.astro";
     document.addEventListener('DOMContentLoaded', function() {
       const video = document.getElementById('landing-video') as HTMLVideoElement;
       if (video) {
-        video.load();
-        video.play();
+        if (sessionStorage.getItem('reloadVideo')) {
+          video.load();
+          video.play();
+          sessionStorage.removeItem('reloadVideo');
+        }
       }
+    });
+
+    window.addEventListener('beforeunload', function() {
+      sessionStorage.setItem('reloadVideo', 'true');
     });
   </script>
 </Layout>
