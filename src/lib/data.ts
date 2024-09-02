@@ -196,7 +196,7 @@ export const players: Player[] = [
         "name": "Caps",
         "years": [2019, 2020, 2021, 2022, 2023, 2024],
         "image": `https://cdn.shopify.com/s/files/1/0548/8554/8183/files/LoL_Caps_112fdb45-9ffa-4695-bf76-9ef892395f19.jpg?v=1706111314`,
-        "titles": ["LEC Spring 2019 1st", "MSI 2019 1st", "LEC Summer 2019 1st", "Worlds 2019 2nd", "LEC Spring 2020 1st", "LEC Summer 2020 1st", "Worlds 2020 Semifinals", "LEC Spring 2022 1st", "MSI 2022 Semifinals", "LEC Summer 2022 2nd", "LEC Winter 2023 1st","LEC Summer 2023 1st", "LEC Grand Finals 2023 1st", "LEC Winter 2024 1st",  "LEC Spring 2024 1st", "MSI 2024 Top 4", "LEC Summer 2024 1st"],
+        "titles": ["LEC Spring 2019 1st", "MSI 2019 1st", "LEC Summer 2019 1st", "Worlds 2019 2nd", "LEC Spring 2020 1st", "LEC Summer 2020 1st", "Worlds 2020 Semifinals", "LEC Spring 2022 1st", "MSI 2022 Semifinals", "LEC Summer 2022 2nd", "LEC Winter 2023 1st","LEC Summer 2023 1st", "LEC Grand Finals 2023 1st", "LEC Winter 2024 1st",  "LEC Spring 2024 1st", "MSI 2024 Top 4", "LEC Summer 2024 1st", "LEC Grand Finals 2024 1st"],
         "position": "mid",
     },
     {
@@ -204,7 +204,7 @@ export const players: Player[] = [
         "name": "Mikyx",
         "years": [2019, 2020, 2021, 2023, 2024],
         "image": `https://cdn.shopify.com/s/files/1/0548/8554/8183/files/LoL_Mikyx_89fa3a6a-0e63-4fcd-ad92-da2fe0feabf0.jpg?v=1706111559`,
-        "titles": ["LEC Spring 2019 1st", "MSI 2019 1st", "LEC Summer 2019 1st", "Worlds 2019 2nd", "LEC Spring 2020 1st", "LEC Summer 2020 1st", "Worlds 2020 Semifinals", "LEC Winter 2023 1st","LEC Summer 2023 1st", "LEC Grand Finals 2023 1st", "LEC Winter 2024 1st",  "LEC Spring 2024 1st", "MSI 2024 Top 4", "LEC Summer 2024 1st"],
+        "titles": ["LEC Spring 2019 1st", "MSI 2019 1st", "LEC Summer 2019 1st", "Worlds 2019 2nd", "LEC Spring 2020 1st", "LEC Summer 2020 1st", "Worlds 2020 Semifinals", "LEC Winter 2023 1st","LEC Summer 2023 1st", "LEC Grand Finals 2023 1st", "LEC Winter 2024 1st",  "LEC Spring 2024 1st", "MSI 2024 Top 4", "LEC Summer 2024 1st", "LEC Grand Finals 2024 1st"],
         "position": "support",
     },
     {
@@ -220,7 +220,7 @@ export const players: Player[] = [
         "name": "BrokenBlade",
         "years": [2022, 2023, 2024],
         "image": `https://cdn.shopify.com/s/files/1/0548/8554/8183/files/LoL_BB.jpg?v=1706111123`,
-        "titles": ["LEC Spring 2022 1st", "MSI 2022 Semifinals", "LEC Summer 2022 2nd", "LEC Winter 2023 1st","LEC Summer 2023 1st", "LEC Grand Finals 2023 1st", "LEC Winter 2024 1st",  "LEC Spring 2024 1st", "MSI 2024 Top 4", "LEC Summer 2024 1st"],
+        "titles": ["LEC Spring 2022 1st", "MSI 2022 Semifinals", "LEC Summer 2022 2nd", "LEC Winter 2023 1st","LEC Summer 2023 1st", "LEC Grand Finals 2023 1st", "LEC Winter 2024 1st",  "LEC Spring 2024 1st", "MSI 2024 Top 4", "LEC Summer 2024 1st", "LEC Grand Finals 2024 1st"],
         "position": "top",
     },
     {
@@ -236,7 +236,7 @@ export const players: Player[] = [
         "name": "Targamas",
         "years": [2022],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/5/51/G2_Targamas_2022_Split_2.png`,
-        "titles": ["LEC Spring 2022 1st", "MSI 2022 Semifinals", "LEC Summer 2022 2nd"],
+        "titles": ["LEC Spring 2022 1st", "MSI 2022 Semifinals", "LEC Summer 2022 2nd", "LEC Grand Finals 2024 1st"],
         "position": "support",
     },
     {
@@ -244,7 +244,7 @@ export const players: Player[] = [
         "name": "Yike",
         "years": [2023, 2024],
         "image": `https://cdn.shopify.com/s/files/1/0548/8554/8183/files/LoL_Yike_a464f772-b243-49b3-b505-58d121ac7498.jpg?v=1706111635`,
-        "titles": ["LEC Winter 2023 1st","LEC Summer 2023 1st", "LEC Grand Finals 2023 1st", "LEC Winter 2024 1st",  "LEC Spring 2024 1st", "MSI 2024 Top 4", "LEC Summer 2024 1st"],
+        "titles": ["LEC Winter 2023 1st","LEC Summer 2023 1st", "LEC Grand Finals 2023 1st", "LEC Winter 2024 1st",  "LEC Spring 2024 1st", "MSI 2024 Top 4", "LEC Summer 2024 1st", "LEC Grand Finals 2024 1st"],
         "position": "jungler",
     },
     {
