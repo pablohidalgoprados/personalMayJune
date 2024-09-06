@@ -88,19 +88,3 @@ const displayYear = (yearNumber: number): string => {
     </main>
   </div>
 </Layout>
-
-<script>
-  // Función para pre-cargar imágenes
-  const preloadImages = (urls: string[]) => {
-    urls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
-    });
-  };
-
-  // Pre-cargar imágenes cuando el documento esté listo
-  document.addEventListener("DOMContentLoaded", () => {
-    const playerImages = JSON.parse('{{JSON.stringify(players.map(player => player.image))}}');
-    preloadImages(playerImages);
-  });
-</script>
