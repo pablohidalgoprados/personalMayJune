@@ -100,7 +100,7 @@ export const players: Player[] = [
         "name": "Kikis",
         "years": [2016.1, 2016.2],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/eb/G2_Kikis_2016_Summer.png`,
-        "titles": ["LCS Spring 2016 1st", "LCS Summer 2016 1st"],
+        "titles": ["EU LCS Spring 2016 1st", "EU LCS Summer 2016 1st"],
         "position": "top",
     },
     {
@@ -108,7 +108,7 @@ export const players: Player[] = [
         "name": "Trick",
         "years": [2016.1, 2016.2, 2016.3, 2017],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/ea/G2_Trick_2017_Spring.png`,
-        "titles": ["LCS Spring 2016 1st", "LCS Summer 2016 1st", "LCS Spring 2017 1st", "MSI 2017 2nd", "LCS Summer 2017 1st"],
+        "titles": ["EU LCS Spring 2016 1st", "EU LCS Summer 2016 1st", "EU LCS Spring 2017 1st", "MSI 2017 2nd", "EU LCS Summer 2017 1st"],
         "position": "jungler",
     },
     {
@@ -116,7 +116,7 @@ export const players: Player[] = [
         "name": "Perkz",
         "years": [2016.1, 2016.2, 2016.3, 2017, 2018, 2019, 2020],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/70/G2_Perkz_2019_WC.png`,
-        "titles": ["LCS Spring 2016 1st", "LCS Summer 2016 1st", "LCS Spring 2017 1st", "MSI 2017 2nd", "LCS Summer 2017 1st", "LCS Spring 2018 2nd", "Worlds 2018 Semifinals", "LEC Spring 2019 1st", "MSI 2019 1st", "LEC Summer 2019 1st", "Worlds 2019 2nd", "LEC Spring 2020 1st", "LEC Summer 2020 1st", "Worlds 2020 Semifinals"],
+        "titles": ["EU LCS Spring 2016 1st", "EU LCS Summer 2016 1st", "EU LCS Spring 2017 1st", "MSI 2017 2nd", "EU LCS Summer 2017 1st", "EU LCS Spring 2018 2nd", "Worlds 2018 Semifinals", "LEC Spring 2019 1st", "MSI 2019 1st", "LEC Summer 2019 1st", "Worlds 2019 2nd", "LEC Spring 2020 1st", "LEC Summer 2020 1st", "Worlds 2020 Semifinals"],
         "position": "mid/adc",
     },
     {
@@ -124,7 +124,7 @@ export const players: Player[] = [
         "name": "Emperor",
         "years": [2016.1],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/ad/G2_Emperor_2016_Spring.png`,
-        "titles": ["LCS Spring 2016 1st"],
+        "titles": ["EU LCS Spring 2016 1st"],
         "position": "adc",
     },
     {
@@ -132,7 +132,7 @@ export const players: Player[] = [
         "name": "Hybrid",
         "years": [2016.1],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/2/28/G2_Hybrid_2016_Spring.png`,
-        "titles": ["LCS Spring 2016 1st"],
+        "titles": ["EU LCS Spring 2016 1st"],
         "position": "support",
     },
     {
@@ -140,7 +140,7 @@ export const players: Player[] = [
         "name": "Expect",
         "years": [2016.3, 2017],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/2/29/G2_Expect_2017_Spring.png`,
-        "titles": ["LCS Spring 2017 1st", "MSI 2017 2nd", "LCS Summer 2017 1st"],
+        "titles": ["EU LCS Spring 2017 1st", "MSI 2017 2nd", "EU LCS Summer 2017 1st"],
         "position": "top",
     },
     {
@@ -148,7 +148,7 @@ export const players: Player[] = [
         "name": "Zven",
         "years": [2016.2, 2016.3, 2017],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/ad/G2_Zven_2017_Spring.png`,
-        "titles": ["LCS Summer 2016 1st", "LCS Spring 2017 1st", "MSI 2017 2nd", "LCS Summer 2017 1st"],
+        "titles": ["EU LCS Summer 2016 1st", "EU LCS Spring 2017 1st", "MSI 2017 2nd", "EU LCS Summer 2017 1st"],
         "position": "adc",
     },
     {
@@ -156,7 +156,7 @@ export const players: Player[] = [
         "name": "Mithy",
         "years": [2016.2, 2016.3, 2017],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/7/71/G2_Mithy_2017_Spring.png`,
-        "titles": ["LCS Summer 2016 1st", "LCS Spring 2017 1st", "MSI 2017 2nd", "LCS Summer 2017 1st"],
+        "titles": ["EU LCS Summer 2016 1st", "EU LCS Spring 2017 1st", "MSI 2017 2nd", "EU LCS Summer 2017 1st"],
         "position": "support",
     },
     {
@@ -164,7 +164,7 @@ export const players: Player[] = [
         "name": "Wunder",
         "years": [2018, 2019, 2020, 2021],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/a/af/G2_Wunder_2019_WC.png`,
-        "titles": ["LCS Spring 2018 2nd", "Worlds 2018 Semifinals", "LEC Spring 2019 1st", "MSI 2019 1st", "LEC Summer 2019 1st", "Worlds 2019 2nd", "LEC Spring 2020 1st", "LEC Summer 2020 1st", "Worlds 2020 Semifinals"],
+        "titles": ["EU LCS Spring 2018 2nd", "Worlds 2018 Semifinals", "LEC Spring 2019 1st", "MSI 2019 1st", "LEC Summer 2019 1st", "Worlds 2019 2nd", "LEC Spring 2020 1st", "LEC Summer 2020 1st", "Worlds 2020 Semifinals"],
         "position": "top",
     },
     {
@@ -172,7 +172,7 @@ export const players: Player[] = [
         "name": "Jankos",
         "years": [2018, 2019, 2020, 2021, 2022],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/ed/G2_Jankos_2019_WC.png`,
-        "titles": ["LCS Spring 2018 2nd", "Worlds 2018 Semifinals", "LEC Spring 2019 1st", "MSI 2019 1st", "LEC Summer 2019 1st", "Worlds 2019 2nd", "LEC Spring 2020 1st", "LEC Summer 2020 1st", "Worlds 2020 Semifinals"],
+        "titles": ["EU LCS Spring 2018 2nd", "Worlds 2018 Semifinals", "LEC Spring 2019 1st", "MSI 2019 1st", "LEC Summer 2019 1st", "Worlds 2019 2nd", "LEC Spring 2020 1st", "LEC Summer 2020 1st", "Worlds 2020 Semifinals"],
         "position": "jungler",
     },
     {
@@ -180,7 +180,7 @@ export const players: Player[] = [
         "name": "Hjarnan",
         "years": [2018],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/6/67/G2_Hjarnan_2018_Split_2.png`,
-        "titles": ["LCS Spring 2018 2nd", "Worlds 2018 Semifinals"],
+        "titles": ["EU LCS Spring 2018 2nd", "Worlds 2018 Semifinals"],
         "position": "adc",
     },
     {
@@ -188,7 +188,7 @@ export const players: Player[] = [
         "name": "Wadid",
         "years": [2018],
         "image": `https://static.wikia.nocookie.net/lolesports_gamepedia_en/images/e/ea/G2_Wadid_2018_Split_2.png`,
-        "titles": ["LCS Spring 2018 2nd", "Worlds 2018 Semifinals"],
+        "titles": ["EU LCS Spring 2018 2nd", "Worlds 2018 Semifinals"],
         "position": "support",
     },
     {
