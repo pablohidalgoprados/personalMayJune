@@ -55,7 +55,7 @@ const getEmoticon = (title: string): string => {
           src={player.image}
           alt={player.name}
           class="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full mb-2 object-cover object-top"
-          transition:name={`player ${id} image`} loading="lazy"
+          transition:name={`img-${player.id}`}
         />
         <div class="ml-4">
           <h1 class="text-3xl font-bold">{player.name}</h1>
